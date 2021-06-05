@@ -30,3 +30,8 @@ console.log(
   'using hash firstRecurringCharacter',
   firstRecurringCharacter2(['a', 'b', 'u', 'y', 'e', 'z', 'x', 'y'])
 );
+
+// let's say you have this input for each of the function, can you detect the different of how the recurred character was detected, also they're different
+
+console.log(firstRecurringCharacter([1, 10, 10, 1, 3, 2, 4]));
+console.log(firstRecurringCharacter2([1, 10, 10, 1, 3, 2, 4]));
