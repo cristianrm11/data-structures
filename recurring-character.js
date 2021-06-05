@@ -18,6 +18,7 @@ function firstRecurringCharacter2(input) {
   let map = {};
   for (let i = 0; i < input.length; i++) {
     if (map[input[i]] !== undefined) {
+      // if (0) falsy in js...type cohersion --> does the key exist, if already have it it will return the index so we must return the value in that position;
       return input[i];
     } else {
       map[input[i]] = i;
