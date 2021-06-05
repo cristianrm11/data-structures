@@ -32,6 +32,16 @@ class HashTable {
       }
     }
   }
+
+  keys() {
+    const keysArray = [];
+    for (let i = 0; i < this.data.length; i++) {
+      if (this.data[i]) {
+        keysArray.push(this.data[i][0][0]);
+      }
+    }
+    return keysArray;
+  }
 }
 
 const myHastTable = new HashTable(50);
@@ -40,6 +50,8 @@ myHastTable.set('apple', 2000);
 myHastTable.set('orange', 3000);
 myHastTable.set('oranges', 3000);
 
-console.log(myHastTable.get('orange'));
+console.log(myHastTable.get('oranges'));
+
+console.log(myHastTable.keys());
 
 console.log(JSON.stringify(myHastTable));
