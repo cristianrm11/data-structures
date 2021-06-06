@@ -49,5 +49,7 @@ function containsCommonItem2(arr1, arr2) {
 console.log('containsCommonItem2', containsCommonItem2(arr1, arr2));
 
 // using es6
-const containsCommonItem2 = (arr1, arr2) =>
+const containsCommonItem3 = (arr1, arr2) =>
   arr1.some((item) => arr2.includes(item));
+
+console.log('containsCommonItem3', containsCommonItem3);
