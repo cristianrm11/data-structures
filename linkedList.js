@@ -82,6 +82,22 @@ class LinkedList {
     leader.next = unwatedNode.next;
     this.length--;
   }
+
+  reverse() {
+    if (!this.head.next) return this.head;
+
+    let firstNode = this.head;
+    this.tail = this.head;
+    let secondNode = firstNode.next;
+    while (secondNode !== null) {
+      const temp = secondNode.next;
+      secondNode.next = firstNode;
+      firstNode = secondNode;
+      secondNode = temp;
+    }
+    this.head.next = null;
+    this.head = firstNode;
+  }
 }
 
 const myLinkedList = new LinkedList(10);
@@ -92,5 +108,7 @@ myLinkedList.insert(0, 99);
 myLinkedList.insert(2, 55);
 console.log(myLinkedList.printList());
 myLinkedList.remove(2);
+
+myLinkedList.reverse();
 
 console.log(myLinkedList.printList());
